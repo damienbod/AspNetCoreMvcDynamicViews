@@ -10,8 +10,10 @@ namespace AspNetCoreMvcDynamicViews.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            var model = new MyDisplayModel();
-            model.DynamicDisplayData = new DynamicDisplayModel();
+            var model = new MyDisplayModel
+            {
+                DynamicDisplayData = new DynamicDisplayModel()
+            };
             return View(model);
         }
 
