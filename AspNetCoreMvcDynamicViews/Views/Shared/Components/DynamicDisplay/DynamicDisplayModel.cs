@@ -2,13 +2,13 @@
 {
     public class DynamicDisplayModel
     {
-        public int NoOfHoles { get; set; } = 1;
+        public int NoOfHoles { get; set; } = 2;
 
-        public int Height { get; set; } = 50;
+        public int BoxHeight { get; set; } = 100;
 
-        public int NoOfBoxes { get; set; } = 1;
+        public int NoOfBoxes { get; set; } = 2;
 
-        public int BoxWidth { get; set; } = 50;
+        public int BoxWidth { get; set; } = 200;
 
         public string GetAsStringWithPx(int value)
         {
