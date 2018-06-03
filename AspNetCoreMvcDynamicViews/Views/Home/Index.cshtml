@@ -1,0 +1,39 @@
+﻿@using AspNetCoreMvcDynamicViews.Views.Shared.Components.DynamicDisplay
+@model MyDisplayModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form asp-controller="Home" asp-action="Index" method="post">
+    <div class="col-md-12">
+
+        @*<div class="form-group row">
+                <label  class="col-sm-3 col-form-label font-weight-bold">Circles</label>
+                <div class="col-sm-9">
+                    <select class="form-control" asp-for="mmm" asp-items="mmmItmes"></select>
+                </div>
+            </div>*@
+
+        <div class="form-group row">
+            <div class="col-sm-12">
+                <select class="form-control" asp-for="DynamicDisplayData.NoOfHoles">
+                    <option value="0" selected>No Holes</option>
+                    <option value="1">1 Hole</option>
+                    <option value="2">2 Holes</option>
+                    <option value="4">4 Holes</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+            <span class="input-group-btn col-sm-12">
+                <button class="btn btn-primary w-100" type="submit">Update</button>
+            </span>
+        </div>
+
+    </div>
+
+    @await Component.InvokeAsync("DynamicDisplay", Model.DynamicDisplayData)
+
+</form>

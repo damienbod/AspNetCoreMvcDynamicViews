@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AspNetCoreMvcDynamicViews</title>
+
+    <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    @*<partial name="_CookieConsentPartial" />*@
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2018 - AspNetCoreMvcDynamicViews</p>
+        </footer>
+    </div>
+
+    <script src="~/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/site.min.js" asp-append-version="true"></script>
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
