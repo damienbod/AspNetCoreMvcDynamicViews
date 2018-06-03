@@ -5,3 +5,10 @@
 	border-radius: 50%;
 	display: inline-block;
 }
+
+.box {
+	width: 300px;
+	border: 1px solid gray;
+	padding: 25px;
+	margin: 25px;
+}
