@@ -4,32 +4,45 @@
     ViewData["Title"] = "Home Page";
 }
 
+<div style="padding:20px;"></div>
+
 <form asp-controller="Home" asp-action="Index" method="post">
     <div class="col-md-12">
 
         @*<div class="form-group row">
-                <label  class="col-sm-3 col-form-label font-weight-bold">Circles</label>
-                <div class="col-sm-9">
-                    <select class="form-control" asp-for="mmm" asp-items="mmmItmes"></select>
-                </div>
-            </div>*@
+            <label  class="col-sm-3 col-form-label font-weight-bold">Circles</label>
+            <div class="col-sm-9">
+                <select class="form-control" asp-for="mmm" asp-items="mmmItmes"></select>
+            </div>
+        </div>*@
 
         <div class="form-group row">
-            <div class="col-sm-12">
-                <select class="form-control" asp-for="DynamicDisplayData.NoOfHoles">
-                    <option value="0" selected>No Holes</option>
-                    <option value="1">1 Hole</option>
-                    <option value="2">2 Holes</option>
-                    <option value="4">4 Holes</option>
-                </select>
-            </div>
-
+            <label class="col-sm-5 col-form-label font-weight-bold">No of Holes</label>
+            <select class="col-sm-5 form-control" asp-for="DynamicDisplayData.NoOfHoles">
+                <option value="0" selected>No Holes</option>
+                <option value="1">1 Hole</option>
+                <option value="2">2 Holes</option>
+                <option value="4">4 Holes</option>
+            </select>
         </div>
 
         <div class="form-group row">
-            <span class="input-group-btn col-sm-12">
-                <button class="btn btn-primary w-100" type="submit">Update</button>
-            </span>
+            <label class="col-sm-5 col-form-label font-weight-bold">Height in mm</label>
+            <input class="col-sm-5 form-control" asp-for="DynamicDisplayData.Height" type="number" min="50" max="200" value="100" />
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-5 col-form-label font-weight-bold">No. of Boxes</label>
+            <input class="col-sm-5 form-control" asp-for="DynamicDisplayData.NoOfBoxes" type="number" min="1" max="5" value="1" />
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-5 col-form-label font-weight-bold">Box Width</label>
+            <input class="col-sm-5 form-control" asp-for="DynamicDisplayData.BoxWidth" type="number" min="50" max="200" value="1" />
+        </div>
+
+        <div class="form-group row">
+            <button class="btn btn-primary col-sm-10" type="submit">Update</button>
         </div>
 
     </div>
