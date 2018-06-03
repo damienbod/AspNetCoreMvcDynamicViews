@@ -9,5 +9,10 @@
         public int NoOfBoxes { get; set; } = 1;
 
         public int BoxWidth { get; set; } = 50;
+
+        public string GetAsStringWithPx(int value)
+        {
+            return $"{value}px";
+        }
     }
 }
