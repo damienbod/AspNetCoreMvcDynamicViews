@@ -1,0 +1,24 @@
+﻿@using AspNetCoreMvcDynamicViews.Views.Shared.Components.DynamicDisplay
+@model DynamicDisplayModel
+
+<div style="height:@Model.GetDisplayHeight(); width:@Model.GetDisplayWidth()">
+    @for (var i = 0; i < Model.NoOfBoxes; i++)
+    {
+    <div class="box" style="width:@Model.GetAsStringWithPx(Model.BoxWidth);height:@Model.GetAsStringWithPx(Model.BoxHeight);">
+        @if (Model.NoOfHoles == 4)
+        {
+            @await Html.PartialAsync("./FourHolesPartial.cshtml")
+        }
+        else if (Model.NoOfHoles == 2)
+        {
+            @await Html.PartialAsync("./TwoHolesPartial.cshtml")
+        }
+        else if (Model.NoOfHoles == 1)
+        {
+            <div class="row justify-content-center align-items-center" style="height:100%">
+                <span class="dot" style=""></span>
+            </div>
+        }
+    </div>
+    }
+</div>

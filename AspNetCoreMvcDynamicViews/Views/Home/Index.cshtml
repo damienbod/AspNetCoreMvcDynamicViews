@@ -1,0 +1,45 @@
+﻿@using AspNetCoreMvcDynamicViews.Views.Shared.Components.DynamicDisplay
+@model MyDisplayModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div style="padding:20px;"></div>
+
+<form asp-controller="Home" asp-action="Index" method="post">
+    <div class="col-md-12">
+
+        <div class="form-group row">
+            <label class="col-sm-5 col-form-label font-weight-bold">No of Holes</label>
+            <select class="col-sm-5 form-control" asp-for="DynamicDisplayData.NoOfHoles">
+                <option value="0" selected>No Holes</option>
+                <option value="1">1 Hole</option>
+                <option value="2">2 Holes</option>
+                <option value="4">4 Holes</option>
+            </select>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-5 col-form-label font-weight-bold">Height in mm</label>
+            <input class="col-sm-5 form-control" asp-for="DynamicDisplayData.BoxHeight" type="number" min="65" max="400" />
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-5 col-form-label font-weight-bold">No. of Boxes</label>
+            <input class="col-sm-5 form-control" asp-for="DynamicDisplayData.NoOfBoxes" type="number" min="1" max="7" />
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-5 col-form-label font-weight-bold">Box Width</label>
+            <input class="col-sm-5 form-control" asp-for="DynamicDisplayData.BoxWidth" type="number" min="65" max="400" />
+        </div>
+
+        <div class="form-group row">
+            <button class="btn btn-primary col-sm-10" type="submit">Update</button>
+        </div>
+
+    </div>
+
+    @await Component.InvokeAsync("DynamicDisplay", Model.DynamicDisplayData)
+
+</form>

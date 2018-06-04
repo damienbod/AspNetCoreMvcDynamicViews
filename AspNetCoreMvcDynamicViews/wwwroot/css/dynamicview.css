@@ -1,0 +1,17 @@
+﻿.dot {
+	height: 25px;
+	width: 25px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.box {
+	float: left;
+	height: 100px;
+	border: 1px solid gray;
+	padding: 5px;
+	margin: 5px;
+	margin-left: 0;
+	margin-right: -1px;
+}
