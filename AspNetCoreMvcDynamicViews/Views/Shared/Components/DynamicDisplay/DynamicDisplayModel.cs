@@ -14,5 +14,15 @@
         {
             return $"{value}px";
         }
+
+        public string GetDisplayHeight()
+        {
+            return $"{BoxHeight + 50 }px";
+        }
+
+        public string GetDisplayWidth()
+        {
+            return $"{BoxWidth * NoOfBoxes}px";
+        }
     }
 }

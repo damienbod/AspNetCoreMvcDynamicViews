@@ -1,14 +1,14 @@
 ﻿@using AspNetCoreMvcDynamicViews.Views.Shared.Components.DynamicDisplay
 @model DynamicDisplayModel
 
-<h4>Holes: @Model.NoOfHoles</h4>
-
-<div class="box" style="width:@Model.GetAsStringWithPx(Model.BoxWidth);height:@Model.GetAsStringWithPx(Model.BoxHeight);">
-    <span class="dot"></span>
+<div style="height:@Model.GetDisplayHeight(); width:@Model.GetDisplayWidth()">
+    @for (var i = 0; i < Model.NoOfBoxes; i++)
+    {
+        <div class="box" style="width:@Model.GetAsStringWithPx(Model.BoxWidth);height:@Model.GetAsStringWithPx(Model.BoxHeight);">
+            @for (var ii = 0; ii < Model.NoOfHoles; ii++)
+            {
+                <span class="dot"></span>
+            }
+        </div>
+    }
 </div>
-
-<div class="box" style="width:@Model.GetAsStringWithPx(Model.BoxWidth);height:@Model.GetAsStringWithPx(Model.BoxHeight);">
-    <span class="dot" ></span>
-    <span class="dot"></span>
-</div>
-
