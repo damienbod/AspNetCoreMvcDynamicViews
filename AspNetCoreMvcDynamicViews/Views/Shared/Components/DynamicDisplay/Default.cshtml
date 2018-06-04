@@ -4,29 +4,15 @@
 <div style="height:@Model.GetDisplayHeight(); width:@Model.GetDisplayWidth()">
     @for (var i = 0; i < Model.NoOfBoxes; i++)
     {
-        <div class="box" style="width:@Model.GetAsStringWithPx(Model.BoxWidth);height:@Model.GetAsStringWithPx(Model.BoxHeight);">
-            <div class="row" style="height:50%">
-                <div class="col-6">
-                    <span class="dot" style="float:left;"></span>
-                </div>
-                <div class="col-6">
-                    <span class="dot" style="float:right;"></span>
-                </div>
-            </div>
-
-            <div class="row align-items-end" style="height:50%">
-                <div class="col-6">
-                    <span class="dot" style="float:left;"></span>
-                </div>
-                <div class="col-6">
-                    <span class="dot" style="float:right;"></span>
-                </div>
-            </div>
-
-            @for (var ii = 0; ii < Model.NoOfHoles; ii++)
-            {
-
-            }
-        </div>
+    <div class="box" style="width:@Model.GetAsStringWithPx(Model.BoxWidth);height:@Model.GetAsStringWithPx(Model.BoxHeight);">
+        @if (Model.NoOfHoles == 4)
+        {
+            @await Html.PartialAsync("./FourHolesPartial.cshtml")
+        }
+        else if (Model.NoOfHoles == 2)
+        {
+            @await Html.PartialAsync("./TwoHolesPartial.cshtml")
+        }
+    </div>
     }
 </div>
