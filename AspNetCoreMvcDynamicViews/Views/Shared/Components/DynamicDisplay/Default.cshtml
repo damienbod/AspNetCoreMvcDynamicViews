@@ -13,6 +13,13 @@
         {
             @await Html.PartialAsync("./TwoHolesPartial.cshtml")
         }
+        else if (Model.NoOfHoles == 1)
+        {
+            <div class="row justify-content-center align-items-center" style="height:100%">
+                <span class="dot" style=""></span>
+            </div>
+
+        }
     </div>
     }
 </div>
