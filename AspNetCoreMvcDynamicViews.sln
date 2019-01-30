@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreMvcDynamicViews", "AspNetCoreMvcDynamicViews\AspNetCoreMvcDynamicViews.csproj", "{E63FC7FA-8C09-4595-BBB0-32DFEDE7C5F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreMvcDynamicViews", "AspNetCoreMvcDynamicViews\AspNetCoreMvcDynamicViews.csproj", "{E63FC7FA-8C09-4595-BBB0-32DFEDE7C5F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2259CB03-2A63-4F61-AD93-FB9D3182537E}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
