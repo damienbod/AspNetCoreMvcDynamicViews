@@ -41,6 +41,8 @@ namespace AspNetCoreMvcDynamicViews
                 app.UseHsts();
             }
 
+            app.UseStaticFiles();
+
             app.UseRouting();
 
             app.UseAuthentication();
